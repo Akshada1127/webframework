@@ -1,0 +1,45 @@
+<html>
+    <head>
+    <title>STUDENT REGISTRATION</title>
+    <script>
+    function student()
+    {
+    var fname=document.getElementById("s1").value;
+    var patt=/[A-Za-z]+$/;
+    if((!fname.match(patt)))
+    {
+    alert("first name should contain alphabets only");
+    return false;
+    }
+    else
+    {
+    alert("first name entered");
+    }
+    var lname=document.getElementById("s2").value;
+    var patt2=/[A-Za-z]+$/
+    if((!lname.match(patt2)))
+    {
+    alert("last name should contain alphabets only");
+    return false;
+    }
+    else
+    {
+    alert("last name entered");
+    }
+    let age=parseInt(document.getElementById("age").value);
+    if(age<18||age>50)
+    {
+    document.write("invalid age");
+    }
+    }
+    </script>
+    </head>
+    <body>
+    <form action="">
+    Student First name:<input type="text"id="s1"><br>
+    Student Last name:<input type="text"id="s2"><br>
+    Student Age:<input type="number"id="age"><br>
+    <button onclick="student()">Submit</button>
+    </form>
+    </body>
+    </html>

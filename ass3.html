@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>
+            email validation
+        </title>
+        <script>
+            function validate()
+            {
+            var name=document.getElementById("t1").value;
+            var patt=/[A-Z a-z]{3,}[0-9]*[@]{1}[A-Z a-z]{3,}[.]{1}[A-Z a-z.]{2,6}$/;
+            document.write(name.match(patt))
+            if(name.match(patt))
+            {
+                alert("Email Address is Valid")
+            }
+            else{
+                alert("Invalid Email Address")
+            }
+            }
+        </script>
+    </head>
+    <form>
+        <h1>EMAIL VALIDATION</h1>
+        Enter Email Address:<input type="text" id="t1"><br>
+        <button onClick="validate()">click</button>
+    </form>
+</html>
